@@ -23,4 +23,4 @@ I'm @al3j4ndrolm, welcome to my GitHub profile!
 
 ## Connect with Me
 
-[LinkedIn]([https://www.linkedin.com/in/yourprofile](https://www.linkedin.com/in/abraham-alejandro-lopez-martin-56bb92268/))
+[My LinkedIn](https://www.linkedin.com/in/abraham-alejandro-lopez-martin-56bb92268/)
