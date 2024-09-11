@@ -9,7 +9,7 @@
 
 🌟 **About Me**
 
-👨‍💻 Currently working on an RMP App for College students
+👨‍💻 Currently working on MyProfessor App for De Anza College
 
 📱 I have already launched an Android app (MyPlan - Task Manager)
 
