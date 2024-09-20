@@ -1,7 +1,7 @@
 # Hi there 👋
 
 -  **I’m interested in:** Mobile app development and open-source projects
--  **I’m currently learning:** Advanced Jetpack Compose techniques and Advance Kotlin
+-  **I’m currently learning:** Advanced Jetpack Compose techniques, Advance Kotlin and UI/UX principles
 -  **I’m looking to collaborate on:** Android projects for mobile development
 -  **How to reach me:** lopezalejandro@gmail.com
 
