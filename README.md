@@ -4,7 +4,7 @@
 
 👨‍💻 Currently working on MyProfessor App for De Anza College and a Registration Script
 
-📱 I have already launched 2 Android apps: ([MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US) and [MyProfessor (for De Anza College)](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US)
+📱 I have already launched 2 Android apps: [MyProfessor (for De Anza College)](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) and [MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US)
 
 🌞 Seeking summer internships for 2025
 
