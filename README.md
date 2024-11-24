@@ -1,17 +1,10 @@
-# Hi there 👋
+# Hello world :)
 
--  **I’m interested in:** Mobile app development and open-source projects
--  **I’m currently learning:** Advanced Jetpack Compose techniques, Advance Kotlin and UI/UX principles
--  **I’m looking to collaborate on:** Android projects for mobile development
--  **How to reach me:** lopezalejandro@gmail.com
+**I’m interested in:** Mobile app development and open-source projects
 
-## About Me
+👨‍💻 Currently working on MyProfessor App for De Anza College and a Registration Script
 
-🌟 **About Me**
-
-👨‍💻 Currently working on MyProfessor App for De Anza College
-
-📱 I have already launched an Android app (MyPlan - Task Manager)
+📱 I have already launched 2 Android apps: ([MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US) and [MyProfessor (for De Anza College)](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US)
 
 🌞 Seeking summer internships for 2025
 
@@ -20,3 +13,4 @@
 ## Connect with Me
 
 [My LinkedIn](https://www.linkedin.com/in/abraham-alejandro-lopez-martin-56bb92268/)
+[My email](lopezalejandro@gmail.com)
