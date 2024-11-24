@@ -13,4 +13,6 @@
 ## Connect with Me
 
 [My LinkedIn](https://www.linkedin.com/in/abraham-alejandro-lopez-martin-56bb92268/)
-[My email](lopezalejandro@gmail.com)
+
+[Email Me](mailto:lopezalejandro5b@gmail.com)
+
