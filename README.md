@@ -2,9 +2,9 @@
 
 **I’m interested in:** Mobile app development and open-source projects
 
-👨‍💻 Currently working on MyProfessor App for De Anza College
+👨‍💻 Currently working on MyProfessor App for Bay Area Universities
 
-📱 I have already launched 2 Android apps: [MyProfessor (for De Anza College)](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) and [MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US)
+📱 I have already launched 2 Android apps: [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) and [MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US)
 
 🌞 Seeking summer internships for 2025
 
