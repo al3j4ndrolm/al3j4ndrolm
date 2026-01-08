@@ -35,6 +35,7 @@ Full-stack Android application for academic support.
 
 ### Pathbase.ai
 AI-powered academic planner for community college students transferring to universities.
-- Next.js 16 + TypeScript frontend
-- CSS Modules with animated particle network
-- AI-driven transfer agreement analysis and course mapping
+- Next.js 16 + TypeScript frontend with CSS Modules
+- Python FastAPI REST API backend
+- PostgreSQL database for transfer agreements and course data
+- AI/ML algorithms for personalized academic plan generation
