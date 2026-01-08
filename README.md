@@ -18,10 +18,10 @@ Actively seeking **Software Engineering Internships – Summer 2025**.
 
 ## Skills
 
-**Languages:** Kotlin, Swift, Python
-**Mobile:** Android, iOS, Jetpack Compose, SwiftUI 
-**Backend:** FastAPI, REST APIs, PostgreSQL  
-**Tools:** Git, Docker
+- **Languages:** Kotlin, Swift, Python
+- **Mobile:** Android, iOS, Jetpack Compose, SwiftUI 
+- **Backend:** FastAPI, REST APIs, PostgreSQL  
+- **Tools:** Git, Docker
 
 ---
 
