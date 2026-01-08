@@ -12,7 +12,7 @@ Computer Science student focused on **Android development and backend systems**.
 I enjoy building **end-to-end applications**, from REST APIs to clean, scalable mobile UIs.
 
 Currently developing **MyProfessor and PathBase.ai** 
-Actively seeking **Software Engineering Internships – Summer 2025**.
+Actively seeking **Software Engineering Internships – Summer 2026**.
 
 ---
 
