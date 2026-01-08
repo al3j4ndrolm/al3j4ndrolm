@@ -1,18 +1,40 @@
-# Hello world :)
+# Alejandro Lopez
 
-**I’m interested in:** Mobile app development and open-source projects
+**Computer Science Student | Mobile/Web & Backend Developer**  
+📍 United States | Sunnyvale, CA 
+📫 [Email](mailto:lopezalejandro5b@gmail.com) • [LinkedIn](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
 
-👨‍💻 Currently working on MyProfessor App for Bay Area Universities
+---
 
-📱 I have already launched 2 Android apps: [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) and [MyPlan - Task Manager](https://play.google.com/store/apps/details?id=com.bizarr.myPlanApp&hl=en_US)
+## About Me
 
-🌞 Seeking summer internships for 2025
+Computer Science student focused on **Android development and backend systems**.  
+I enjoy building **end-to-end applications**, from REST APIs to clean, scalable mobile UIs.
 
-💻 **Skills:** Kotlin | Java | Jetpack Compose | Python
+Currently developing **MyProfessor and PathBase.ai** 
+Actively seeking **Software Engineering Internships – Summer 2025**.
 
-## Connect with Me
+---
 
-[My LinkedIn](https://www.linkedin.com/in/abraham-alejandro-lopez-martin-56bb92268/)
+## Skills
 
-[Email Me](mailto:lopezalejandro5b@gmail.com)
+**Languages:** Kotlin, Swift, Python
+**Mobile:** Android, iOS, Jetpack Compose, SwiftUI 
+**Backend:** FastAPI, REST APIs, PostgreSQL  
+**Tools:** Git, Docker
 
+---
+
+## Projects
+
+### MyProfessor
+Full-stack Android application for academic support.
+- Kotlin + Jetpack Compose frontend
+- FastAPI backend with PostgreSQL
+- REST API design and authentication
+
+### Pathbase.ai
+AI-powered academic planner for community college students transferring to universities.
+- Next.js 16 + TypeScript frontend
+- CSS Modules with animated particle network
+- AI-driven transfer agreement analysis and course mapping
