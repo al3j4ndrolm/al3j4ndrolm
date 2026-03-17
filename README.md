@@ -1,6 +1,6 @@
 # Alejandro Lopez
 
-**Computer Science Student @ SJSU | Mobile/Web & Backend Developer**  
+**Computer Science Student @ SJSU | Android Developer**  
 📍 United States | Sunnyvale, CA 
 📫 [Email](mailto:lopezalejandro5b@gmail.com) • [LinkedIn](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
 
