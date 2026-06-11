@@ -35,3 +35,12 @@ Spontaneous meetup Android app — create and join nearby events in real time.
 ###  Baobao [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
 Community platform for expecting and new moms — social feed, marketplace, events, daily journaling, and an AI advisor powered by the Anthropic API.
 `SwiftUI` `iOS` `React` `Anthropic API`
+
+## Shipped
+
+### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
+Full-stack Android/iOS application for academic support. Find your classes, pick professors, see reviews, make schedules. All in one place.
+- Kotlin + Jetpack Compose frontend
+- FastAPI backend with PostgreSQL
+- REST API design and authentication
+- Professor AI Summary (Powered by [![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)](#))
