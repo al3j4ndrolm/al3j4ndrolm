@@ -1,8 +1,11 @@
 # Alejandro Lopez
 
 **Computer Science Student @ SJSU | [![Android](https://img.shields.io/badge/Android_Developer-3DDC84?logo=android&logoColor=white)](#)**  
-📍 United States | Sunnyvale, CA 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#) [](mailto:lopezalejandro5b@gmail.com) • [![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#) [](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
+📍 United States | Sunnyvale, CA
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#) [Contact here](mailto:lopezalejandro5b@gmail.com)
+
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#) [See profile](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
 
 ---
 
