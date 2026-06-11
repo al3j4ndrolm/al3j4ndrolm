@@ -1,5 +1,3 @@
-<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/1e64df3b-4434-420e-b4e2-0a2a32b66548" />
-
 # Alejandro Lopez
 
 **Computer Science Student @ SJSU | [![Android](https://img.shields.io/badge/Android_Developer-3DDC84?logo=android&logoColor=white)](#)**  
