@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/9e8745b8-a8c5-4b12-897f-3e63e45d048a" />
+  <img width="60" height="60" align="absmiddle" alt="image" src="https://github.com/user-attachments/assets/9e8745b8-a8c5-4b12-897f-3e63e45d048a" />
   Alejandro Lopez
 </h1>
 
