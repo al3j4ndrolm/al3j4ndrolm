@@ -1,4 +1,4 @@
-<img width="600" height="292" alt="image" src="https://github.com/user-attachments/assets/1e64df3b-4434-420e-b4e2-0a2a32b66548" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/1e64df3b-4434-420e-b4e2-0a2a32b66548" />
 
 # Alejandro Lopez
 
