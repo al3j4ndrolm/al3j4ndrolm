@@ -1,4 +1,4 @@
-# Alejandro Lopez <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/9e8745b8-a8c5-4b12-897f-3e63e45d048a" />
+# <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/9e8745b8-a8c5-4b12-897f-3e63e45d048a" /> Alejandro Lopez 
 
 
 **Computer Science Student @ SJSU | [![Android](https://img.shields.io/badge/Android_Developer-3DDC84?logo=android&logoColor=white)](#)**  
