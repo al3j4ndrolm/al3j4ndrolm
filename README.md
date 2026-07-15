@@ -37,7 +37,7 @@ Spontaneous meetup Android app — create and join nearby events in real time.
 
 ###  iCanCook [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
 An AI-powered kitchen helper - Millions of recipes in your hands by just using your phone camera.
-`SwiftUI` `iOS` `React` `Anthropic API`
+`SwiftUI` `iOS` `React` `Gemini`
 
 ## Shipped
 
