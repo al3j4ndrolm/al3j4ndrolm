@@ -17,7 +17,7 @@
 Computer Science student focused on **Android development and backend systems**.  
 I enjoy building **end-to-end applications**, from REST APIs to clean, scalable mobile UIs.
 
-Currently developing **Join and Baobao** and actively seeking **Software Engineering Internships – Fall 2026**.
+Currently developing **Join and iCanCook** and actively seeking **Software Engineering Internships – Fall 2026**.
 
 ---
 
