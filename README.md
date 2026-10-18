@@ -48,6 +48,8 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 - REST API design and authentication
 - Professor AI Summary (Powered by [![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)](#))
 
+<a href="https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US"><img src="https://raw.githubusercontent.com/al3j4ndrolm/al3j4ndrolm/main/assets/myprofessor-banner.png" alt="MyProfessor: find your classes, pick professors, see reviews" width="480"></a>
+
 ### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
 Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
