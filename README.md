@@ -53,3 +53,5 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
 - Handles permissions, rotation and upright photos out of the box
 - Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
