@@ -48,9 +48,8 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 - REST API design and authentication
 - Professor AI Summary (Powered by [![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)](#))
 
-### Iteri (Launching Process) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
-Real-time public transit arrivals for the Bay Area. Find the stops nearest you and see live countdowns for the next bus or train on one clean screen, no account needed.
-- Kotlin + Jetpack Compose frontend
-- FastAPI backend with in-memory + file caching
-- Live arrivals via the [![511.org](https://img.shields.io/badge/511.org-0072BC?logoColor=white)](#) SIRI/GTFS-RT API
-- Location-based nearby stop search (haversine geofiltering)
+### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
+- Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
+- Handles permissions, rotation and upright photos out of the box
+- Published on JitPack, built and tested with GitHub Actions
