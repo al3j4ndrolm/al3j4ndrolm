@@ -21,24 +21,6 @@ Currently developing **Join and iCanCook** and actively seeking **Software Engin
 
 ---
 
-## Stack
-
-- **Languages:** [![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&logoColor=white)](#)  [![Swift](https://img.shields.io/badge/Swift-F54A2A?logo=swift&logoColor=white)](#) [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
-- **Mobile:** [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
-- **Databases:** [![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=Firebase&logoColor=white)](#) [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=fff)](#)
-
----
-
-## Ongoing Projects
-
-### Join [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
-Spontaneous meetup Android app — create and join nearby events in real time.
-`Kotlin` `Jetpack Compose` `MVVM` `Firebase Auth` `Firestore` `Cloud Functions` `FCM` `Google Maps`
-
-###  iCanCook [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
-An AI-powered kitchen helper - Millions of recipes in your hands by just using your phone camera.
-`SwiftUI` `iOS` `React` `Gemini`
-
 ## Shipped
 
 ### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
@@ -57,3 +39,23 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 - Published on JitPack, built and tested with GitHub Actions
 
 <a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
+
+---
+
+## Ongoing Projects
+
+### Join [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Spontaneous meetup Android app — create and join nearby events in real time.
+`Kotlin` `Jetpack Compose` `MVVM` `Firebase Auth` `Firestore` `Cloud Functions` `FCM` `Google Maps`
+
+###  iCanCook [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
+An AI-powered kitchen helper - Millions of recipes in your hands by just using your phone camera.
+`SwiftUI` `iOS` `React` `Gemini`
+
+---
+
+## Stack
+
+- **Languages:** [![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&logoColor=white)](#)  [![Swift](https://img.shields.io/badge/Swift-F54A2A?logo=swift&logoColor=white)](#) [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
+- **Mobile:** [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
+- **Databases:** [![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=Firebase&logoColor=white)](#) [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=fff)](#)
