@@ -23,7 +23,7 @@ Currently developing **Join and iCanCook** and actively seeking **Software Engin
 
 ## Shipped
 
-### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
+### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) (+1.5k downloads) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
 Full-stack Android/iOS application for academic support. Find your classes, pick professors, see reviews, make schedules. All in one place.
 - Kotlin + Jetpack Compose frontend
 - FastAPI backend with PostgreSQL
