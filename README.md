@@ -40,6 +40,14 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 
 <a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
 
+### [DataDrawer](https://github.com/al3j4ndrolm/DataDrawer) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Open-source Android local storage library: save and read anything with one line, `datadrawer.save("name", "Ale")`. No DataStore setup, no Room boilerplate.
+- Kotlin + kotlinx.serialization + Jetpack Compose (`rememberDrawer`)
+- Saves values, objects and lists, organized into separate "drawers"
+- Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/DataDrawer"><img src="https://raw.githubusercontent.com/al3j4ndrolm/DataDrawer/main/docs/social-preview.png" alt="DataDrawer: Android local storage in one line" width="480"></a>
+
 ---
 
 ## Ongoing Projects
