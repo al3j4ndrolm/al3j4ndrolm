@@ -48,6 +48,14 @@ Open-source Android local storage library: save and read anything with one line,
 
 <a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage: Android local storage in one line" width="480"></a>
 
+### [FacilisPermission](https://github.com/al3j4ndrolm/FacilisPermission) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Open-source Android permissions library: request any runtime permission with one line, `permissions.request(Permission.Location) { granted -> }`. No `registerForActivityResult`, no version checks.
+- Kotlin + Jetpack Compose (`rememberPermission`) + coroutines
+- Handles Android 13/14 changes, approximate location, "don't ask again" and the Settings round trip
+- Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission: Android permissions in one line" width="480"></a>
+
 ---
 
 ## Ongoing Projects
