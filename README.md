@@ -6,9 +6,9 @@
 **Computer Science Student @ SJSU | [![Android](https://img.shields.io/badge/Android_Developer-3DDC84?logo=android&logoColor=white)](#)**  
 📍 United States | Sunnyvale, CA
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#) [Contact here](mailto:lopezalejandro5b@gmail.com)
+[![Gmail](https://img.shields.io/badge/-D14836?logo=gmail&logoColor=white)](#) [Contact here](mailto:lopezalejandro5b@gmail.com)
 
-[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#) [See profile](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/-0A66C2?logo=linkedin-white&logoColor=fff)](#) [See profile](https://www.linkedin.com/in/alejandro-lopez-56bb92268/)
 
 ---
 
@@ -23,7 +23,7 @@ Currently developing **Join and iCanCook** and actively seeking **Software Engin
 
 ## Shipped
 
-### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#) (+1.5k Downloads)
+### [MyProfessor](https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US) [![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)](#) [![iOS](https://img.shields.io/badge/-000000?logo=apple&logoColor=white)](#) (+1.5k Downloads)
 Full-stack Android/iOS application for academic support. Find your classes, pick professors, see reviews, make schedules. All in one place.
 - Kotlin + Jetpack Compose frontend
 - FastAPI backend with PostgreSQL
@@ -32,7 +32,7 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 
 <a href="https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US"><img src="https://raw.githubusercontent.com/al3j4ndrolm/al3j4ndrolm/main/assets/myprofessor-banner.png" alt="MyProfessor: find your classes, pick professors, see reviews" width="480"></a>
 
-### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) [![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)](#)
 Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
 - Handles permissions, rotation and upright photos out of the box
@@ -40,7 +40,7 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 
 <a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
 
-### [DataDrawer](https://github.com/al3j4ndrolm/DataDrawer) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+### [DataDrawer](https://github.com/al3j4ndrolm/DataDrawer) [![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)](#)
 Open-source Android local storage library: save and read anything with one line, `datadrawer.save("name", "Ale")`. No DataStore setup, no Room boilerplate.
 - Kotlin + kotlinx.serialization + Jetpack Compose (`rememberDrawer`)
 - Saves values, objects and lists, organized into separate "drawers"
@@ -52,11 +52,11 @@ Open-source Android local storage library: save and read anything with one line,
 
 ## Ongoing Projects
 
-### Join [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+### Join [![Android](https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white)](#)
 Spontaneous meetup Android app — create and join nearby events in real time.
 `Kotlin` `Jetpack Compose` `MVVM` `Firebase Auth` `Firestore` `Cloud Functions` `FCM` `Google Maps`
 
-###  iCanCook [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)
+###  iCanCook [![iOS](https://img.shields.io/badge/-000000?&logo=apple&logoColor=white)](#)
 An AI-powered kitchen helper - Millions of recipes in your hands by just using your phone camera.
 `SwiftUI` `iOS` `React` `Gemini`
 
