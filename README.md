@@ -35,6 +35,7 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 - FastAPI backend with PostgreSQL
 - REST API design and authentication
 - Professor AI Summary (Powered by <img align="absmiddle" src="https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff" alt="Deepseek">)
+
 <a href="https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US"><img src="https://raw.githubusercontent.com/al3j4ndrolm/al3j4ndrolm/main/assets/myprofessor-banner.png" alt="MyProfessor: find your classes, pick professors, see reviews" width="480"></a>
  
 ### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
@@ -42,6 +43,7 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
 - Handles permissions, rotation and upright photos out of the box
 - Published on JitPack, built and tested with GitHub Actions
+
 <a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
  
 ### [FacilisStorage](https://github.com/al3j4ndrolm/FacilisStorage) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
@@ -49,6 +51,7 @@ Open-source Android local storage library: save and read anything with one line,
 - Kotlin + kotlinx.serialization + Jetpack Compose (`rememberStorage`)
 - Saves values, objects and lists, organized into separate "drawers"
 - Published on JitPack, built and tested with GitHub Actions
+
 <a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage: Android local storage in one line" width="480"></a>
  
 ### [FacilisPermission](https://github.com/al3j4ndrolm/FacilisPermission) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
@@ -56,6 +59,7 @@ Open-source Android permissions library: request any runtime permission with one
 - Kotlin + Jetpack Compose (`rememberPermission`) + coroutines
 - Handles Android 13/14 changes, approximate location, "don't ask again" and the Settings round trip
 - Published on JitPack, built and tested with GitHub Actions
+
 <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission: Android permissions in one line" width="480"></a>
  
 ---
