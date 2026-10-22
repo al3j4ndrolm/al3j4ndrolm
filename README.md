@@ -61,6 +61,14 @@ Open-source Android permissions library: request any runtime permission with one
 - Published on JitPack, built and tested with GitHub Actions
 
 <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission: Android permissions in one line" width="480"></a>
+
+### [FacilisNotification](https://github.com/al3j4ndrolm/FacilisNotification) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Open-source Android notifications library: show, schedule and handle notifications with one line, `notify("Coffee is ready")`. No channels, `PendingIntent`s or AlarmManager setup.
+- Kotlin, built on FacilisPermission
+- Buttons, replies, progress, and scheduling that survives reboots
+- Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification: Android notifications in one line" width="480"></a>
  
 ---
  
