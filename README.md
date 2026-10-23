@@ -23,7 +23,7 @@ Contact me:
 Computer Science student focused on **Android development and backend systems**.  
 I enjoy building **end-to-end applications**, from REST APIs to clean, scalable mobile UIs.
  
-Currently developing **Join and iCanCook** and actively seeking **Software Engineering Internships – Fall 2026**.
+Currently developing **Join and iCanCook** and actively seeking a **Software Engineering Internship for 2027** or a **full-time New Grad role**.
  
 ---
  
@@ -38,6 +38,14 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 
 <a href="https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US"><img src="https://raw.githubusercontent.com/al3j4ndrolm/al3j4ndrolm/main/assets/myprofessor-banner.png" alt="MyProfessor: find your classes, pick professors, see reviews" width="480"></a>
  
+### [FacilisAI](https://github.com/al3j4ndrolm/FacilisAI) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
+Open-source on-device AI library for Android: run a local model with one line, `ai("Summarize this")`. Offline, private and free, with typed answers and agents that use your app's tools.
+- Kotlin, built on Google's LiteRT-LM (Qwen3 and Gemma 4 models)
+- Typed answers with `ai<T>()`, tool calling, chat, photos, resumable model downloads
+- Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/FacilisAI"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisAI/main/docs/social-preview.png" alt="FacilisAI: on-device AI and agents for Android in one line" width="480"></a>
+ 
 ### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
 Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
@@ -46,37 +54,13 @@ Open-source Android camera library: take a photo with one line, `camera.open { p
 
 <a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
  
-### [FacilisStorage](https://github.com/al3j4ndrolm/FacilisStorage) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
-Open-source Android local storage library: save and read anything with one line, `storage.save("name", "Ale")`. No DataStore setup, no Room boilerplate.
-- Kotlin + kotlinx.serialization + Jetpack Compose (`rememberStorage`)
-- Saves values, objects and lists, organized into separate "drawers"
-- Published on JitPack, built and tested with GitHub Actions
+### More from the Facilis family
+One-line Android libraries, open source and published on JitPack:
+- [**FacilisStorage**](https://github.com/al3j4ndrolm/FacilisStorage): save and read anything, `storage.save("name", "Ale")`
+- [**FacilisPermission**](https://github.com/al3j4ndrolm/FacilisPermission): any runtime permission, `permissions.request(Permission.Location) { granted -> }`
+- [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
 
-<a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage: Android local storage in one line" width="480"></a>
- 
-### [FacilisPermission](https://github.com/al3j4ndrolm/FacilisPermission) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
-Open-source Android permissions library: request any runtime permission with one line, `permissions.request(Permission.Location) { granted -> }`. No `registerForActivityResult`, no version checks.
-- Kotlin + Jetpack Compose (`rememberPermission`) + coroutines
-- Handles Android 13/14 changes, approximate location, "don't ask again" and the Settings round trip
-- Published on JitPack, built and tested with GitHub Actions
-
-<a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission: Android permissions in one line" width="480"></a>
-
-### [FacilisNotification](https://github.com/al3j4ndrolm/FacilisNotification) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
-Open-source Android notifications library: show, schedule and handle notifications with one line, `notify("Coffee is ready")`. No channels, `PendingIntent`s or AlarmManager setup.
-- Kotlin, built on FacilisPermission
-- Buttons, replies, progress, and scheduling that survives reboots
-- Published on JitPack, built and tested with GitHub Actions
-
-<a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification: Android notifications in one line" width="480"></a>
-
-### [FacilisAI](https://github.com/al3j4ndrolm/FacilisAI) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
-Open-source on-device AI library for Android: run a local model with one line, `ai("Summarize this")`. Offline, private and free, with typed answers and agents that use your app's tools.
-- Kotlin, built on Google's LiteRT-LM (Qwen3 and Gemma 4 models)
-- Typed answers with `ai<T>()`, tool calling, chat, photos, resumable model downloads
-- Published on JitPack, built and tested with GitHub Actions
-
-<a href="https://github.com/al3j4ndrolm/FacilisAI"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisAI/main/docs/social-preview.png" alt="FacilisAI: on-device AI and agents for Android in one line" width="480"></a>
+<a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage" width="260"></a> <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission" width="260"></a> <a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification" width="260"></a>
  
 ---
  
