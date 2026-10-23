@@ -69,6 +69,14 @@ Open-source Android notifications library: show, schedule and handle notificatio
 - Published on JitPack, built and tested with GitHub Actions
 
 <a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification: Android notifications in one line" width="480"></a>
+
+### [FacilisAI](https://github.com/al3j4ndrolm/FacilisAI) [![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#)
+Open-source on-device AI library for Android: run a local model with one line, `ai("Summarize this")`. Offline, private and free, with typed answers and agents that use your app's tools.
+- Kotlin, built on Google's LiteRT-LM (Qwen3 and Gemma 4 models)
+- Typed answers with `ai<T>()`, tool calling, chat, photos, resumable model downloads
+- Published on JitPack, built and tested with GitHub Actions
+
+<a href="https://github.com/al3j4ndrolm/FacilisAI"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisAI/main/docs/social-preview.png" alt="FacilisAI: on-device AI and agents for Android in one line" width="480"></a>
  
 ---
  
