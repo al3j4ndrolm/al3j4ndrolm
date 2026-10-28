@@ -59,8 +59,10 @@ One-line Android libraries, open source and published on JitPack:
 - [**FacilisStorage**](https://github.com/al3j4ndrolm/FacilisStorage): save and read anything, `storage.save("name", "Ale")`
 - [**FacilisPermission**](https://github.com/al3j4ndrolm/FacilisPermission): any runtime permission, `permissions.request(Permission.Location) { granted -> }`
 - [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
+- [**FacilisMaps**](https://github.com/al3j4ndrolm/FacilisMaps): maps and location with no API key, `location.current()`, `Map(markers = pins)`
 
-<a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage" width="260"></a> <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission" width="260"></a> <a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification" width="260"></a>
+<a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage" width="390"></a> <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission" width="390"></a><br>
+<a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification" width="390"></a> <a href="https://github.com/al3j4ndrolm/FacilisMaps"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisMaps/main/docs/social-preview.png" alt="FacilisMaps" width="390"></a>
  
 ---
  
