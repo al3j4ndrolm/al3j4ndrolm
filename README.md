@@ -35,24 +35,18 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 - FastAPI backend with PostgreSQL
 - REST API design and authentication
 - Professor AI Summary (Powered by <img align="absmiddle" src="https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff" alt="Deepseek">)
-
-<a href="https://play.google.com/store/apps/details?id=com.bizarrdev.MyProfessor&hl=en_US"><img src="https://raw.githubusercontent.com/al3j4ndrolm/al3j4ndrolm/main/assets/myprofessor-banner.png" alt="MyProfessor: find your classes, pick professors, see reviews" width="480"></a>
  
 ### [FacilisAI](https://github.com/al3j4ndrolm/FacilisAI) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
 Open-source on-device AI library for Android: run a local model with one line, `ai("Summarize this")`. Offline, private and free, with typed answers and agents that use your app's tools.
 - Kotlin, built on Google's LiteRT-LM (Qwen3 and Gemma 4 models)
 - Typed answers with `ai<T>()`, tool calling, chat, photos, resumable model downloads
 - Published on JitPack, built and tested with GitHub Actions
-
-<a href="https://github.com/al3j4ndrolm/FacilisAI"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisAI/main/docs/social-preview.png" alt="FacilisAI: on-device AI and agents for Android in one line" width="480"></a>
  
 ### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
 Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
 - Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
 - Handles permissions, rotation and upright photos out of the box
 - Published on JitPack, built and tested with GitHub Actions
-
-<a href="https://github.com/al3j4ndrolm/FacilisCam"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisCam/main/docs/social-preview.png" alt="FacilisCam: the Android camera in one line" width="480"></a>
  
 ### More from the Facilis family
 One-line Android libraries, open source and published on JitPack:
@@ -60,9 +54,6 @@ One-line Android libraries, open source and published on JitPack:
 - [**FacilisPermission**](https://github.com/al3j4ndrolm/FacilisPermission): any runtime permission, `permissions.request(Permission.Location) { granted -> }`
 - [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
 - [**FacilisMaps**](https://github.com/al3j4ndrolm/FacilisMaps): maps and location with no API key, `location.current()`, `Map(markers = pins)`
-
-<a href="https://github.com/al3j4ndrolm/FacilisStorage"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisStorage/main/docs/social-preview.png" alt="FacilisStorage" width="390"></a> <a href="https://github.com/al3j4ndrolm/FacilisPermission"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisPermission/main/docs/social-preview.png" alt="FacilisPermission" width="390"></a><br>
-<a href="https://github.com/al3j4ndrolm/FacilisNotification"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisNotification/main/docs/social-preview.png" alt="FacilisNotification" width="390"></a> <a href="https://github.com/al3j4ndrolm/FacilisMaps"><img src="https://raw.githubusercontent.com/al3j4ndrolm/FacilisMaps/main/docs/social-preview.png" alt="FacilisMaps" width="390"></a>
  
 ---
  
