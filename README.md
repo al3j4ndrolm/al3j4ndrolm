@@ -36,20 +36,11 @@ Full-stack Android/iOS application for academic support. Find your classes, pick
 - REST API design and authentication
 - Professor AI Summary (Powered by <img align="absmiddle" src="https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff" alt="Deepseek">)
  
-### [FacilisAI](https://github.com/al3j4ndrolm/FacilisAI) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
-Open-source on-device AI library for Android: run a local model with one line, `ai("Summarize this")`. Offline, private and free, with typed answers and agents that use your app's tools.
-- Kotlin, built on Google's LiteRT-LM (Qwen3 and Gemma 4 models)
-- Typed answers with `ai<T>()`, tool calling, chat, photos, resumable model downloads
-- Published on JitPack, built and tested with GitHub Actions
- 
-### [FacilisCam](https://github.com/al3j4ndrolm/FacilisCam) <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
-Open-source Android camera library: take a photo with one line, `camera.open { photo -> }`. No permission code, no CameraX setup, no manifest edits.
-- Kotlin + CameraX + Jetpack Compose (`PhotoBox`, `rememberPhoto`)
-- Handles permissions, rotation and upright photos out of the box
-- Published on JitPack, built and tested with GitHub Actions
- 
-### More from the Facilis family
+### Facilis Libraries <img align="absmiddle" src="https://img.shields.io/badge/-3DDC84?logo=android&logoColor=white" alt="Android">
 One-line Android libraries, open source and published on JitPack:
+
+- [**FacilisAI**](https://github.com/al3j4ndrolm/FacilisAI) run a local model with one line, `ai("Summarize this")`. Offline, private and free
+- [**FacilisCam**](https://github.com/al3j4ndrolm/FacilisCam) take a photo with one line, `camera.open { photo -> }`
 - [**FacilisStorage**](https://github.com/al3j4ndrolm/FacilisStorage): save and read anything, `storage.save("name", "Ale")`
 - [**FacilisPermission**](https://github.com/al3j4ndrolm/FacilisPermission): any runtime permission, `permissions.request(Permission.Location) { granted -> }`
 - [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
