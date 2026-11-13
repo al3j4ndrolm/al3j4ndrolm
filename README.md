@@ -1,9 +1,10 @@
 
 
 
+
 Readme · MD
 <h1>
-  <img width="60" height="60" align="absmiddle" alt="image" src="https://github.com/user-attachments/assets/9e8745b8-a8c5-4b12-897f-3e63e45d048a" />
+  <img width="34" height="34" align="absmiddle" alt="android-pointer" src="https://github.com/user-attachments/assets/7930865b-2e5b-41d1-91f7-00dcad650397" />
   Alejandro Lopez
 </h1>
 
