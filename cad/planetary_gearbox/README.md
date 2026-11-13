@@ -1,29 +1,38 @@
-# Planetary (sun) gearbox — 4:1, NEMA17 input
+# Planetary (sun) gearbox: 4:1 hand-crank demo
 
 ![preview](preview.png)
 
-Parametric model in [build123d](https://github.com/gumyr/build123d) (OpenCascade B-rep). Edit the parameters at the top of `gearbox.py` and run it again.
+3D-printable, **tool-free**: no screws, bearings or glue. Every part prints flat without supports, and they snap together by fit.
+Turn the crank (purple) 4 times and the output pointer (red) turns once. Count it against the 30° ticks on the lid.
 
-| | |
-|---|---|
-| Ratio | 4:1 (sun 18T → 3× planet 18T, fixed ring 54T, carrier output) |
-| Gears | module 1.5, 20° involute, 10 mm face width, 0.15 mm print backlash |
-| Size | Ø102 × 32 mm (+13 mm output shaft) |
-| Input | NEMA17: Ø5 D-shaft, 31 mm M3 pattern (counterbored inside the floor) |
-| Output | Ø8 shaft with flat, carried by a 608 bearing in the lid |
+Parametric [build123d](https://github.com/gumyr/build123d) model. Edit the parameters at the top of `gearbox.py` and run `python gearbox.py`.
 
-## Files (`out/`)
-- `assembly.step`: full assembly; import into Onshape (*Import* → creates a Part Studio)
-- `housing_ring.step/.stl`, `sun`, `planet` (print 3), `carrier`, `lid`
+## Print list (`out/*.stl`, already in print orientation)
+| Part | Qty | Notes |
+|---|---|---|
+| housing | 1 | ring gear (54T) + twist-lock slots + centring pin |
+| sun | 1 | 18T gear + shaft with hex tip, prints gear-down |
+| planet | **3** | 18T gear with integral axle stub |
+| carrier | 1 | plate + hollow output tube with hex tip |
+| lid | 1 | 3-lug bayonet, dial ticks |
+| pointer | 1 | press-fits on the carrier hex |
+| crank | 1 | press-fits on the sun hex |
 
-## Hardware
-- 1× 608 bearing (8×22×7)
-- 4× M3×8 (motor), 4× M3×12 self-tapping (lid)
-- Motor shaft protrusion ≤ 22 mm (trim if longer)
+Suggested: PLA/PETG, 0.2 mm layers, 0.4 mm nozzle, 3 walls, 20–30 % infill. Ø102 mm footprint.
 
-## Build
-```bash
-pip install build123d
-python gearbox.py
-```
-Constraints are checked at runtime: `ZR = ZS + 2·ZP` and `(ZS+ZR)/N` must be an integer.
+## Assembly
+1. Drop the **sun** into the housing, onto the centre pin.
+2. Place the 3 **planets** (stubs up) around the sun, meshing with the ring.
+3. Lower the **carrier** over the sun shaft, so the stubs enter the 3 holes.
+4. Fit the **lid**: line its lugs up with the 3 slots, push down and **twist ~35° clockwise** to lock.
+5. Push the **pointer** onto the large hex and the **crank** onto the small hex.
+
+## Fit tuning (printer-dependent)
+| Parameter | Default | If… |
+|---|---|---|
+| `HEX_FIT` | 0.10 mm | crank/pointer too tight → 0.15, loose → 0.05 |
+| `CLR` | 0.25 mm | shafts bind → 0.3 |
+| `BACKLASH` | 0.20 mm | gears bind → 0.25, sloppy → 0.15 |
+
+Verified in CAD: all solids valid, no interference through the gear mesh cycle, lid inserts freely when unlocked and is captured when twisted.
+`out/assembly.step` contains the assembled model for Onshape (Import → Part Studio).
