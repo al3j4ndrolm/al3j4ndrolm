@@ -21,12 +21,15 @@ PA = radians(20)
 ZS, ZP, ZR = 18, 18, 54          # ZR = ZS + 2*ZP
 N_PLANETS = 3
 FW = 10.0
-BACKLASH = 0.2                   # tooth-thickness reduction at pitch circle, per gear
+BACKLASH = 0.15                  # tooth-thickness reduction at pitch circle, per gear
 
-# ---------------- Print fits (mm) ----------------
-CLR = 0.25        # radial clearance on rotating fits
-HEX_FIT = 0.10    # per-side clearance for push-fit hex couplings (raise to 0.15 if too tight)
-AXIAL_GAP = 0.3   # vertical gap between moving parts
+# ---------------- Print fits (mm) — tuned for Elegoo Neptune 4 Pro (Klipper, 0.4 nozzle) ----------------
+# v1 (CLR 0.25 / HEX 0.10 / gap 0.3) printed loose on the N4 Pro -> tightened.
+CLR = 0.15        # radial clearance on rotating fits
+HEX_FIT = 0.03    # per-side clearance for push-fit hex couplings (interference-ish friction fit)
+AXIAL_GAP = 0.2   # vertical gap between moving parts
+LOCK_PLAY = 0.15  # axial play of the twist-lock lid when locked
+LUG_CLR = 0.2     # radial clearance of lid lugs in their slots
 
 # ---------------- Geometry ----------------
 HOUSING_R = 51.0
@@ -136,14 +139,14 @@ def make_housing():
     body += cyl(1.7, 1.6, FLOOR_T)                          # sun centring pin
     for a in lug_angles():
         # vertical entry slot
-        body -= ring_sector([(BORE_R - 1, Z_SPIGOT), (LUG_OUT + 0.4, Z_SPIGOT),
-                             (LUG_OUT + 0.4, Z_TOP), (BORE_R - 1, Z_TOP)],
+        body -= ring_sector([(BORE_R - 1, Z_SPIGOT), (LUG_OUT + LUG_CLR, Z_SPIGOT),
+                             (LUG_OUT + LUG_CLR, Z_TOP), (BORE_R - 1, Z_TOP)],
                             a - SLOT_DEG / 2, SLOT_DEG)
         # locking groove, ceiling chamfered 45deg so it prints without support
-        # ceiling sits 0.3 mm above the lug's chamfered top -> 0.3 mm axial play when locked
-        ceil_out = Z_SPIGOT + AXIAL_GAP + 1.0 + 0.3 - 0.4
-        g = [(BORE_R - 1, Z_SPIGOT), (LUG_OUT + 0.4, Z_SPIGOT), (LUG_OUT + 0.4, ceil_out),
-             (BORE_R - 1, ceil_out + (LUG_OUT + 1.4 - BORE_R))]
+        # ceiling sits LOCK_PLAY above the lug's chamfered top
+        ceil_out = Z_SPIGOT + AXIAL_GAP + 1.0 + LOCK_PLAY - LUG_CLR
+        g = [(BORE_R - 1, Z_SPIGOT), (LUG_OUT + LUG_CLR, Z_SPIGOT), (LUG_OUT + LUG_CLR, ceil_out),
+             (BORE_R - 1, ceil_out + (LUG_OUT + 1 + LUG_CLR - BORE_R))]
         body -= ring_sector(g, a - SLOT_DEG / 2, SLOT_DEG + TWIST_DEG)
     body -= grip_flutes(0, Z_TOP)
     return body

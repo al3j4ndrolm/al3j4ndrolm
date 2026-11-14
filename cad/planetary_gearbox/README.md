@@ -28,11 +28,13 @@ Suggested: PLA/PETG, 0.2 mm layers, 0.4 mm nozzle, 3 walls, 20–30 % infill. Ø
 5. Push the **pointer** onto the large hex and the **crank** onto the small hex.
 
 ## Fit tuning (printer-dependent)
+Defaults are tuned for an **Elegoo Neptune 4 Pro** (v1 values printed loose).
 | Parameter | Default | If… |
 |---|---|---|
-| `HEX_FIT` | 0.10 mm | crank/pointer too tight → 0.15, loose → 0.05 |
-| `CLR` | 0.25 mm | shafts bind → 0.3 |
-| `BACKLASH` | 0.20 mm | gears bind → 0.25, sloppy → 0.15 |
+| `HEX_FIT` | 0.03 mm | crank/pointer too tight → 0.06, loose → 0.0 |
+| `CLR` | 0.15 mm | shafts bind → 0.2 |
+| `BACKLASH` | 0.15 mm | gears bind → 0.2, sloppy → 0.1 |
+| `LOCK_PLAY` | 0.15 mm | lid rattles → 0.1 |
 
 Verified in CAD: all solids valid, no interference through the gear mesh cycle, lid inserts freely when unlocked and is captured when twisted.
 `out/assembly.step` contains the assembled model for Onshape (Import → Part Studio).
