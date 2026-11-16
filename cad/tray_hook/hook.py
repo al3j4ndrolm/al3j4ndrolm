@@ -1,18 +1,23 @@
 """
 Clip-on tray hook with a tie ring — build123d.
 
-A C-clip slides over the tray's outer edge (two grip ridges give a light clamp). A smooth neck
-drops to a ring for tying a toy or a pacifier leash. The whole outline is one filleted shape,
-printed flat on its side, so the layers run along the clip arms (strongest direction).
+Two variants, same look (flowing outline, one-sided taper, all edges rounded, Ø14 tie ring):
+  * hook_skirt (default, recommended for the Stokke Tray) — clips UP onto the bottom edge of the
+    tray's downturned outer skirt from underneath. Nothing sits on the eating surface; the ring
+    hangs straight below the tray edge.
+  * hook_lip — clamps a flat horizontal edge (top arm visible on the tray surface).
+Printed flat on its side so the layers run along the clip arms (strongest direction for a clip).
 
-1) Print out/edge_gauge.stl, push it onto the tray edge, and note the slot that slides on snugly.
-2) Set EDGE_T below to that value, run  python hook.py,  then print out/hook.stl.
+1) Print out/edge_gauge.stl, push a slot onto the skirt's bottom edge, note the snug slot.
+2) Set EDGE_T to that value, run  python hook.py,  print out/hook_skirt.stl.
 """
 from pathlib import Path
 from build123d import *
 
 # ---------------- Fit to the tray (MEASURE) ----------------
-EDGE_T = 3.5        # tray edge thickness, mm (from the gauge)
+EDGE_T = 3.0        # skirt wall thickness, mm (from the gauge). Molded PP trays are typically 2.5-3.5
+SKIRT_OUT_L = 11.0  # skirt variant: arm up the outside face (visible) — keep below skirt height (~20 mm)
+SKIRT_IN_L = 9.0    # skirt variant: arm up the inside of the skirt (hidden)
 GRIP = 0.35         # each ridge pinches this much into the gap (light snap; PETG)
 
 # ---------------- Shape ----------------
@@ -31,7 +36,7 @@ EDGE_FILLET = 1.2   # rounds every outer edge
 OUT = Path(__file__).parent / "out"
 
 
-def hook(t=EDGE_T):
+def hook_lip(t=EDGE_T):
     c = Vector(0.3, t / 2)                       # nose centre (0.3 mm clearance at the edge tip)
     r_out = t / 2 + WALL
     ring_ro = RING_RI + RING_BAND
@@ -56,7 +61,7 @@ def hook(t=EDGE_T):
     face -= Circle(RING_RI).moved(Location(ring_c))
 
     part = extrude(face, WIDTH)
-    part = part & _taper_body(t)
+    part = part & _taper_body(t + WALL + 5, -WALL, ring_c.Y - ring_ro)
     try:
         part = fillet(part.edges(), EDGE_FILLET)          # soften every edge
     except ValueError:
@@ -68,10 +73,40 @@ def hook(t=EDGE_T):
     return part
 
 
-def _taper_body(t):
-    """Width envelope: full WIDTH across the clip, easing to RING_W at the ring (one-sided taper)."""
+def hook_skirt(t=EDGE_T):
+    """Skirt wall occupies x in [-t, 0] (outside face at x=0), its bottom edge at y=0, rising +y."""
+    c = Vector(-t / 2, -0.3)                     # bend centre, 0.3 mm under the skirt's bottom edge
+    r_out = t / 2 + WALL
+    ring_ro = RING_RI + RING_BAND
+    ring_c = Vector(c.X, c.Y - r_out - NECK_DROP - ring_ro)   # pendant: ring centred under the bend
+
+    body = Circle(r_out).moved(Location(c)) & Rectangle(2 * r_out, r_out, align=(Align.CENTER, Align.MAX)).moved(Location(c))
+    body += Rectangle(NECK_W, c.Y - ring_c.Y, align=(Align.CENTER, Align.MAX)).moved(Location(c))
+    body += Circle(ring_ro).moved(Location(ring_c))
+    body = offset(offset(body, FILLET_2D, kind=Kind.ARC), -FILLET_2D, kind=Kind.ARC)
+    # arms added after the blend so the gap stays crisp
+    for x0, L in ((0.0, SKIRT_OUT_L), (-t - WALL, SKIRT_IN_L)):
+        body += Rectangle(WALL, L - c.Y, align=(Align.MIN, Align.MIN)).moved(Location((x0, c.Y)))
+        body += Circle(WALL / 2).moved(Location((x0 + WALL / 2, L)))
+    assert len(body.faces()) == 1, "outline must be one piece"
+    face = body.faces()[0]
+    face -= Rectangle(t, 60, align=(Align.MIN, Align.MIN)).moved(Location((-t, c.Y)))
+    face -= Circle(t / 2).moved(Location(c))
+    face -= Circle(RING_RI).moved(Location(ring_c))
+
+    part = extrude(face, WIDTH)
+    part = part & _taper_body(max(SKIRT_OUT_L, SKIRT_IN_L) + 5, c.Y - r_out, ring_c.Y - ring_ro)
+    part = fillet(part.edges(), EDGE_FILLET)
+    # grip ridges near the arm tips, pinching GRIP into the gap from each side
+    for x, y in ((0.8 - GRIP, SKIRT_OUT_L - 3), (-t - 0.8 + GRIP, SKIRT_IN_L - 3)):
+        part += Cylinder(0.8, WIDTH - 2 * EDGE_FILLET, align=(Align.CENTER, Align.CENTER, Align.MIN)).moved(
+            Location((x, y, EDGE_FILLET)))
+    return part
+
+
+def _taper_body(y_top, y0, y1):
+    """Width envelope: full WIDTH above y0 (the clip), easing to RING_W at y1 (ring bottom)."""
     from math import cos, pi
-    y_top, y0, y1 = t + WALL + 5, -WALL, -WALL - NECK_DROP - 2 * (RING_RI + RING_BAND)
     def hw(y):
         if y >= y0: return WIDTH / 2
         k = min(1.0, (y0 - y) / (y0 - y1))
@@ -101,12 +136,12 @@ def edge_gauge(sizes=tuple(x / 2 for x in range(5, 17))):   # 2.5 ... 8.0 mm
 
 def build():
     OUT.mkdir(exist_ok=True)
-    h, gauge = hook(), edge_gauge()
-    for name, p in (("hook", h), ("edge_gauge", gauge)):
+    h, lip, gauge = hook_skirt(), hook_lip(), edge_gauge()
+    for name, p in (("hook_skirt", h), ("hook_lip", lip), ("edge_gauge", gauge)):
         export_step(p, OUT / f"{name}.step")
         export_stl(p, OUT / f"{name}.stl", tolerance=0.01, angular_tolerance=0.1)
     bb = h.bounding_box()
-    print(f"hook {bb.size.X:.1f} x {bb.size.Y:.1f} x {bb.size.Z:.1f} mm | valid={h.is_valid} | edge T={EDGE_T}")
+    print(f"hook_skirt {bb.size.X:.1f} x {bb.size.Y:.1f} x {bb.size.Z:.1f} mm | valid={h.is_valid} | edge T={EDGE_T}")
 
 
 if __name__ == "__main__":
