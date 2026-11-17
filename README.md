@@ -47,7 +47,9 @@ One-line Android libraries, open source and published on JitPack:
 - [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
 - [**FacilisMaps**](https://github.com/al3j4ndrolm/FacilisMaps): maps and location with no API key, `location.current()`, `Map(markers = pins)`
 
-Also: [**SnapNavigation**](https://github.com/al3j4ndrolm/SnapNavigation), Jetpack Compose navigation with zero setup, `nav.go(Profile("42"))`
+Also:
+- [**AutoAuth**](https://github.com/al3j4ndrolm/AutoAuth): Firebase sign-in in one line, `auth.signIn()`, with ready-made Google, Apple, GitHub and email buttons
+- [**SnapNavigation**](https://github.com/al3j4ndrolm/SnapNavigation): Jetpack Compose navigation with zero setup, `nav.go(Profile("42"))`
  
 ---
  
