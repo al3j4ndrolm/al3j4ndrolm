@@ -46,6 +46,8 @@ One-line Android libraries, open source and published on JitPack:
 - [**FacilisPermission**](https://github.com/al3j4ndrolm/FacilisPermission): any runtime permission, `permissions.request(Permission.Location) { granted -> }`
 - [**FacilisNotification**](https://github.com/al3j4ndrolm/FacilisNotification): show and schedule notifications, `notify("Coffee is ready")`
 - [**FacilisMaps**](https://github.com/al3j4ndrolm/FacilisMaps): maps and location with no API key, `location.current()`, `Map(markers = pins)`
+
+Also: [**SnapNavigation**](https://github.com/al3j4ndrolm/SnapNavigation), Jetpack Compose navigation with zero setup, `nav.go(Profile("42"))`
  
 ---
  
