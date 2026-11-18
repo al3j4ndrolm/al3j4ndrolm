@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facet</title>
+  <link rel="stylesheet" href="../node_modules/@fontsource/inter/400.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/inter/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/inter/600.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/inter/700.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/jetbrains-mono/400.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/jetbrains-mono/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/space-grotesk/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/space-grotesk/700.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/fraunces/400.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/fraunces/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/fraunces/600.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/400.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/600.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/outfit/400.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/outfit/500.css">
+  <link rel="stylesheet" href="../node_modules/@fontsource/outfit/600.css">
+  <link rel="stylesheet" href="styles.css">
+  <style id="typeCss"></style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<div id="app" data-mode="split" data-mtab="canvas">
+  <header class="topbar">
+    <div class="brand"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect class="a" x="1" y="1" width="22" height="22" rx="7"/><path class="b" d="M12 1h4a7 7 0 0 1 7 7v4H12z"/><path class="c" d="M8 7h6v2.4H10.6V11H13v2.3h-2.4V17H8z"/></svg><span>Facet</span></div>
+    <span class="proj" id="proj">Brew <span>/ sample</span></span>
+    <div class="tabs" id="screenTabs" role="tablist" aria-label="Screens"></div>
+    <div class="grow"></div>
+    <div class="tabs tool" id="toolTabs"></div>
+    <div class="grow"></div>
+    <span class="sync" id="sync"><i></i><span>Synced with source</span></span>
+    <select id="device" class="dev" aria-label="Preview device"></select>
+    <div class="tabs lay" id="layTabs"></div>
+  </header>
+
+  <main class="workspace" id="workspace">
+    <section class="design-half">
+      <aside class="panel left" aria-label="Layers and theme">
+        <div class="ptabs" id="leftTabs"></div>
+        <div class="pscroll" id="leftLayers">
+          <div class="sec"><h3>Insert <em>into selection</em></h3><div class="palette" id="palette"></div></div>
+          <div class="sec sec-tree"><h3 id="treeHead">Layers</h3><div class="tree" id="tree" role="tree"></div></div>
+        </div>
+        <div class="pscroll" id="leftTheme" hidden></div>
+      </aside>
+      <div class="canvas-wrap">
+        <div class="viewport" id="viewport"><div class="stage" id="stage"></div><div class="ov" id="ov"></div></div>
+        <div class="cv-tools cv-tl" id="cvTL"></div>
+        <div class="cv-tools cv-tr" id="cvTR"></div>
+        <div class="cv-hint" id="cvHint"></div>
+      </div>
+      <aside class="panel right" aria-label="Properties"><div class="pscroll" id="insp"></div></aside>
+    </section>
+    <div class="splitter" id="splitter" role="separator" aria-label="Resize design and code"></div>
+    <section class="panel code-half" aria-label="Code">
+      <div class="ftabs" id="ftabs" role="tablist"></div>
+      <div class="crumbs" id="crumbs"></div>
+      <div class="editor">
+        <div class="codeview" id="codeView"></div>
+        <div class="vm" id="vmEd" hidden>
+          <div class="vm-scroll" id="vmScroll">
+            <div class="vm-gut" id="vmGut"></div>
+            <div class="vm-code"><div class="vm-pre" id="vmPre" aria-hidden="true"></div><textarea id="vmTa" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" aria-label="MenuViewModel.kt source"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="console">
+        <div class="con-head" id="conHead"></div>
+        <div class="con-body" id="conBody"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="statusbar" id="statusbar"></footer>
+  <nav class="mtabs" id="mtabs" aria-label="Panels"></nav>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal" id="shortcuts" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="scTitle">
+    <div class="modal-head"><h2 id="scTitle">Keyboard shortcuts</h2><button class="tbtn icon" data-close-modal aria-label="Close">✕</button></div>
+    <div class="sc-grid">
+      <h3>Canvas</h3>
+      <div><span>Select parent</span><kbd>Esc</kbd></div>
+      <div><span>Delete layer</span><kbd>⌫</kbd></div>
+      <div><span>Duplicate layer</span><kbd>⌘D</kbd></div>
+      <div><span>Move layer up / down</span><kbd>⌥↑ ⌥↓</kbd></div>
+      <div><span>Zoom in / out / fit</span><kbd>⌘= ⌘− ⌘0</kbd></div>
+      <div><span>Zoom with trackpad</span><kbd>⌘ + scroll</kbd></div>
+      <h3>Modes</h3>
+      <div><span>Design · Split · Code</span><kbd>⌘1 ⌘2 ⌘3</kbd></div>
+      <div><span>Navigation flow</span><kbd>⌘4</kbd></div>
+      <div><span>Play / stop prototype</span><kbd>⌘↩ or P</kbd></div>
+      <div><span>Reset prototype state</span><kbd>⇧⌘R</kbd></div>
+      <div><span>Preview app in dark scheme</span><kbd>⇧⌘L</kbd></div>
+      <h3>File</h3>
+      <div><span>New window</span><kbd>⌘N</kbd></div>
+      <div><span>Open · Save · Save As</span><kbd>⌘O ⌘S ⇧⌘S</kbd></div>
+      <div><span>Export Kotlin sources</span><kbd>⇧⌘E</kbd></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+name: Facet macOS build
+
+on:
+  push:
+    paths:
+      - "facet-studio/**"
+      - ".github/workflows/facet-studio-mac.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: facet-studio
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: facet-studio/package-lock.json
+
+      - run: npm ci
+
+      # Ad-hoc signed (identity "-"), so it runs on Apple Silicon without a paid Developer ID.
+      - run: npm run dist
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+
+      - name: Verify signatures
+        run: |
+          codesign --verify --deep --strict --verbose=2 dist/mac-arm64/Facet.app
+          codesign --verify --deep --strict --verbose=2 dist/mac/Facet.app
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Facet-macOS
+          path: |
+            facet-studio/dist/*.dmg
+            facet-studio/dist/*.zip
+          if-no-files-found: error
+          retention-days: 30
