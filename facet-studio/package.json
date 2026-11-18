@@ -1,10 +1,10 @@
 {
   "name": "facet-studio",
   "productName": "Facet",
-  "version": "0.1.0",
-  "description": "Design Jetpack Compose screens visually and wire them to your Kotlin ViewModels.",
+  "version": "1.0.0",
+  "description": "Design Jetpack Compose screens, wire them to your Kotlin ViewModels, and build and run them on Android devices.",
   "private": true,
-  "main": "main.js",
+  "main": "main/index.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --mac --publish never",
@@ -31,18 +31,11 @@
       "buildResources": "build"
     },
     "files": [
-      "main.js",
+      "main/**/*",
       "preload.js",
       "src/**/*",
+      "templates/**/*",
       "package.json"
-    ],
-    "fileAssociations": [
-      {
-        "ext": "facet",
-        "name": "Facet Project",
-        "description": "Facet Project",
-        "role": "Editor"
-      }
     ],
     "mac": {
       "category": "public.app-category.developer-tools",
@@ -65,11 +58,26 @@
             "x64"
           ]
         }
-      ]
+      ],
+      "extendInfo": {
+        "CFBundleDocumentTypes": [
+          {
+            "CFBundleTypeName": "Folder",
+            "CFBundleTypeRole": "Editor",
+            "LSHandlerRank": "Alternate",
+            "LSItemContentTypes": [
+              "public.folder"
+            ]
+          }
+        ]
+      }
     },
     "dmg": {
       "title": "Facet ${version}"
     },
-    "publish": null
+    "publish": null,
+    "asarUnpack": [
+      "templates/**/*"
+    ]
   }
 }

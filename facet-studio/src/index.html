@@ -24,19 +24,27 @@
   <link rel="stylesheet" href="../node_modules/@fontsource/outfit/600.css">
   <link rel="stylesheet" href="styles.css">
   <style id="typeCss"></style>
-  <script src="app.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="app/base.js" defer></script>
+  <script src="app/render.js" defer></script>
+  <script src="app/panels.js" defer></script>
+  <script src="app/code.js" defer></script>
+  <script src="app/commands.js" defer></script>
+  <script src="app/desktop.js" defer></script>
+  <script src="app/events.js" defer></script>
 </head>
 <body>
+<div class="welcome" id="welcome" hidden></div>
 <div id="app" data-mode="split" data-mtab="canvas">
   <header class="topbar">
     <div class="brand"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect class="a" x="1" y="1" width="22" height="22" rx="7"/><path class="b" d="M12 1h4a7 7 0 0 1 7 7v4H12z"/><path class="c" d="M8 7h6v2.4H10.6V11H13v2.3h-2.4V17H8z"/></svg><span>Facet</span></div>
-    <span class="proj" id="proj">Brew <span>/ sample</span></span>
+    <span class="proj" id="proj"></span>
     <div class="tabs" id="screenTabs" role="tablist" aria-label="Screens"></div>
     <div class="grow"></div>
     <div class="tabs tool" id="toolTabs"></div>
     <div class="grow"></div>
-    <span class="sync" id="sync"><i></i><span>Synced with source</span></span>
-    <select id="device" class="dev" aria-label="Preview device"></select>
+    <span class="sync" id="sync"><i></i><span>Saved to disk</span></span>
+    <div class="runbar" id="runBar" hidden></div>
     <div class="tabs lay" id="layTabs"></div>
   </header>
 
@@ -49,6 +57,7 @@
           <div class="sec sec-tree"><h3 id="treeHead">Layers</h3><div class="tree" id="tree" role="tree"></div></div>
         </div>
         <div class="pscroll" id="leftTheme" hidden></div>
+        <div class="pscroll" id="leftProject" hidden></div>
       </aside>
       <div class="canvas-wrap">
         <div class="viewport" id="viewport"><div class="stage" id="stage"></div><div class="ov" id="ov"></div></div>
@@ -64,7 +73,7 @@
       <div class="crumbs" id="crumbs"></div>
       <div class="editor">
         <div class="codeview" id="codeView"></div>
-        <div class="vm" id="vmEd" hidden>
+        <div class="vm-ed" id="vmEd" hidden>
           <div class="vm-scroll" id="vmScroll">
             <div class="vm-gut" id="vmGut"></div>
             <div class="vm-code"><div class="vm-pre" id="vmPre" aria-hidden="true"></div><textarea id="vmTa" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" aria-label="MenuViewModel.kt source"></textarea></div>
@@ -82,6 +91,9 @@
   <nav class="mtabs" id="mtabs" aria-label="Panels"></nav>
 </div>
 <div class="toast" id="toast" role="status"></div>
+<div class="modal" id="wizard" hidden><div class="modal-card wide" role="dialog" aria-modal="true" aria-label="New project"></div></div>
+<div class="modal" id="settings" hidden><div class="modal-card wide" role="dialog" aria-modal="true" aria-label="Settings"></div></div>
+<div class="modal" id="ask" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-label="Name"></div></div>
 <div class="modal" id="shortcuts" hidden>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="scTitle">
     <div class="modal-head"><h2 id="scTitle">Keyboard shortcuts</h2><button class="tbtn icon" data-close-modal aria-label="Close">✕</button></div>
@@ -99,10 +111,14 @@
       <div><span>Play / stop prototype</span><kbd>⌘↩ or P</kbd></div>
       <div><span>Reset prototype state</span><kbd>⇧⌘R</kbd></div>
       <div><span>Preview app in dark scheme</span><kbd>⇧⌘L</kbd></div>
+      <h3>Run</h3>
+      <div><span>Save, build and run on device</span><kbd>⌘R</kbd></div>
+      <div><span>Stop</span><kbd>⌘.</kbd></div>
+      <div><span>New screen · New ViewModel</span><kbd>⇧⌘N ⌥⌘N</kbd></div>
       <h3>File</h3>
-      <div><span>New window</span><kbd>⌘N</kbd></div>
-      <div><span>Open · Save · Save As</span><kbd>⌘O ⌘S ⇧⌘S</kbd></div>
-      <div><span>Export Kotlin sources</span><kbd>⇧⌘E</kbd></div>
+      <div><span>New project</span><kbd>⌘N</kbd></div>
+      <div><span>Open project · Save</span><kbd>⌘O ⌘S</kbd></div>
+      <div><span>Settings</span><kbd>⌘,</kbd></div>
     </div>
   </div>
 </div>
