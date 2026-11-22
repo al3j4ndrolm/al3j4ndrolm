@@ -25,6 +25,18 @@ published under an LLC doesn't automatically make the app commercial, but **ads,
 IAP or a subscription almost certainly do.** The config will tag every source
 `commercial_ok: true|false|conditional` so non-commercial sources can be switched off.
 
+### Decision log
+
+| Date | Decision | Effect |
+|---|---|---|
+| 2026-11-22 | **App will be fully free. Users are never charged.** | The deployment runs as **non-commercial** (`COMMERCIAL_MODE=false`). TMDB, Google Books, RAWG, Watchmode, MangaDex, MusicBrainz supplementary data and TMDB watch providers can all be enabled. The `commercial_ok` flags stay in config in case this ever changes. |
+
+> ⚠️ **What still counts as commercial:** "users are never charged" isn't quite the same as
+> "no revenue". **Ads, sponsorships, affiliate links (e.g. streaming referral links) or paid
+> donations tiers** would likely make the app commercial under TMDB's _"primary purpose is
+> to create revenue"_ test. Also, because the app is published by an LLC, a one-line email
+> to TMDB confirming non-commercial status is cheap insurance. TMDB alone decides.
+
 ---
 
 ## Movies / TV
@@ -100,41 +112,40 @@ IAP or a subscription almost certainly do.** The config will tag every source
 
 ## Recommended source per field
 
-Two tracks: a **commercial-safe** default, plus extras that run only while `COMMERCIAL_MODE=false`.
+Updated for the **non-commercial (fully free) decision**. The last column lists what stays
+safe if `COMMERCIAL_MODE` ever flips to `true`.
 
-| Field | Primary (commercial-safe) | Non-commercial extra / fallback |
-|---|---|---|
-| **Entity resolution / cross-IDs** | Wikidata weekly dump (CC0) | — |
-| Movie/TV core metadata, posters, backdrops | Wikidata + TVmaze (TV) | **TMDB** (best quality overall; needs agreement if commercial) |
-| **TV seasons + episode lists** | **TVmaze** (CC BY-SA) | TMDB; TheTVDB (free under $50k revenue) for alt. orderings |
-| TV episode stills | TVmaze images | TMDB stills |
-| Movie runtime, release dates | Wikidata | TMDB |
-| Trending / upcoming movies & TV | Trakt (Standard) + TVmaze schedule | TMDB trending/upcoming |
-| Related movies/TV | Wikidata (shared series/genre/creator) + Trakt related | TMDB recommendations |
-| **Where to watch** | ⚠️ no commercial-safe free source (see Gaps) | TMDB watch providers (+ JustWatch credit) |
-| **ISBN lookup, editions, page counts** | **Open Library dump** (+ API for misses) | Google Books |
-| Book descriptions | Open Library | Google Books |
-| Book covers | Open Library Covers API (hotlink/cache, rate-limited) | Google Books thumbnails |
-| Game metadata, platforms, release dates, covers | **IGDB** (partnership email first) | RAWG |
-| Game playtime | IGDB time-to-beat | RAWG `playtime` |
-| **Podcast directory / search** | **Podcast Index** (API + SQLite dump) | — |
-| **Podcast episodes** | **Raw RSS** (source of truth), Podcast Index as index | — |
-| **Album / tracklist / durations** | **MusicBrainz CC0 core dump** | — |
-| Album art | Cover Art Archive (hotlink) ⚠️ licensing decision | — |
-| Music genres/styles | Discogs CC0 dump (no images) | MusicBrainz tags (CC BY-NC-SA) |
-| Anime series (as TV) | TVmaze / Wikidata | TMDB, TheTVDB |
-| Anime/manga-specific (chapters, studios) | Official MAL API (pending terms review) | MangaDex (manga); AniList **only with written approval** |
-| Ratings | Own users' ratings (first-party) + Wikidata | TMDB vote avg; IGDB rating |
+| Field | Primary | Fallback | Still OK if commercial? |
+|---|---|---|---|
+| **Entity resolution / cross-IDs** | Wikidata weekly dump (CC0) | TMDB `external_ids` | ✅ Wikidata |
+| Movie/TV core metadata, posters, backdrops | **TMDB** | TVmaze (TV), Wikidata | TVmaze + Wikidata only |
+| **TV seasons + episode lists** | **TVmaze** (complete, free, no key) | TMDB; TheTVDB for DVD/absolute orderings | ✅ TVmaze |
+| TV episode stills | TMDB stills | TVmaze images | TVmaze |
+| Movie runtime, release dates | TMDB | Wikidata | Wikidata |
+| Trending / upcoming movies & TV | **TMDB** trending / upcoming | Trakt, TVmaze schedule | Trakt + TVmaze |
+| Related movies/TV | TMDB recommendations | Trakt related, Wikidata | Trakt + Wikidata |
+| **Where to watch** | **TMDB watch providers** (+ TMDB & JustWatch credit) | Streaming Availability API (deep links, 100/day) | ❌ gap |
+| **ISBN lookup, editions, page counts** | **Open Library dump** (+ API for misses) | Google Books | ✅ Open Library |
+| Book descriptions | Google Books (richer) | Open Library | Open Library |
+| Book covers | Open Library Covers | Google Books thumbnails | Open Library |
+| Game metadata, platforms, release dates, covers | **IGDB** (no partnership needed while non-commercial) | RAWG (20k req/month) | IGDB via partnership |
+| Game playtime | IGDB time-to-beat | RAWG `playtime` | IGDB |
+| **Podcast directory / search** | **Podcast Index** (API + SQLite dump) | — | ✅ |
+| **Podcast episodes** | **Raw RSS** (source of truth), Podcast Index as index | — | ✅ |
+| **Album / tracklist / durations** | **MusicBrainz dump** | — | ✅ (core only) |
+| Album art | Cover Art Archive ⚠️ pending decision | — | ⚠️ |
+| Music genres/styles | MusicBrainz tags + Discogs CC0 dump (no images) | — | Discogs only |
+| Anime series (as TV) | TMDB / TVmaze | TheTVDB, Wikidata | TVmaze + Wikidata |
+| Anime/manga-specific (chapters, studios, airing) | ⚠️ pending AniList decision | MangaDex (manga), official MAL API (terms review) | ❌ |
+| Ratings | TMDB vote avg, IGDB rating, own users' ratings | Wikidata | first-party only |
 
 ## Known gaps
 
-1. **Commercial-grade movie/TV metadata + artwork at $0.** If the app is monetized,
-   TMDB needs a written agreement that may carry fees. Fallback: TVmaze + Wikidata, which
-   cover TV well but are thinner for **movies** (no high-quality posters).
-   **Biggest open item.**
-2. **Where-to-watch for a commercial app.** Every free option is non-commercial,
-   unconfirmed, or 100 req/day. JustWatch can't be scraped. This stays a gap until there's a paid plan or
-   a TMDB commercial agreement.
+1. ~~Commercial-grade movie/TV metadata.~~ **Resolved** by the non-commercial decision:
+   TMDB is primary. It only comes back as a gap if the app ever earns revenue.
+2. **Where-to-watch deep links.** TMDB's provider list says _which_ services carry a title,
+   but gives no link straight to it on each service. Deep links need the Streaming Availability API (100/day free).
+   That's enough for on-demand lookups with long caching, but not for bulk.
 3. **Anime/manga tracking data.** AniList's ToS likely bars tracker apps, Jikan is
    unauthorized scraping, and Kitsu's terms are unknown. Only the official MAL API (terms
    need review) and TV-style data from TVmaze/TMDB remain. Manga chapter counts are the weakest area.
@@ -151,13 +162,13 @@ Two tracks: a **commercial-safe** default, plus extras that run only while `COMM
 
 ## Decisions needed from you (licensing / cost)
 
-1. **Will the app make money?** (ads, subscription, IAP, paid upfront). This decides
-   whether TMDB, Google Books, RAWG, MangaDex, MusicBrainz tags and TMDB watch providers can
-   be enabled. Recommendation: build everything behind `commercial_ok` flags and **email TMDB
-   now** about a commercial agreement, since it's the single most valuable source.
-2. **IGDB:** OK to email partner@igdb.com for a (free) commercial partnership?
-3. **AniList:** exclude by default, or email contact@anilist.co asking for an exemption from the tracker clause?
-4. **Album art (Cover Art Archive):** accept the hotlink-only approach, or ship without art?
-5. **TheTVDB:** OK to enable under the free under-$50k tier (requires an annual self-declared tier)?
-6. **Excluded outright** (please confirm): IMDb datasets, OMDb, Jikan, Spotify, Deezer,
-   iTunes Search, Hardcover, Kitsu (until terms are confirmed).
+1. ~~Will the app make money?~~ **Decided 2026-11-22: fully free, users never charged.**
+   Still to confirm: no ads, sponsorships or affiliate links either (see Decision log).
+2. ~~IGDB partnership~~: not needed while the app is non-commercial.
+3. ~~TheTVDB~~: the $0-revenue tier is free. Enabled as an optional fallback (annual self-declared tier).
+4. **AniList:** exclude by default, or email contact@anilist.co asking for an exemption
+   from the tracker clause? (The clause applies whether or not the app makes money.)
+5. **Album art (Cover Art Archive):** accept the hotlink-only approach, or ship without art?
+6. **Excluded outright** (please confirm): IMDb datasets (the ban on repurposing the data into a
+   database still applies), OMDb, Jikan, Spotify, Deezer, iTunes Search, Hardcover, Kitsu
+   (until its terms are confirmed).
