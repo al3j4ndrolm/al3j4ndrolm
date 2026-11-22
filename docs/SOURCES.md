@@ -29,6 +29,10 @@ IAP or a subscription almost certainly do.** The config will tag every source
 
 | Date | Decision | Effect |
 |---|---|---|
+| 2026-11-22 | **No revenue of any kind** (no ads, sponsorships, affiliate links, donation perks). | Non-commercial status holds for TMDB etc. |
+| 2026-11-22 | **AniList: full adapter with storage, gated on written approval.** Owner is contacting contact@anilist.co. | Adapter built with `enabled: false` (needs `ANILIST_APPROVED=true`). Turn on only after AniList approves the tracker use and the storage. |
+| 2026-11-22 | **Album art: hotlink only** from Cover Art Archive. | Store image URLs only, never image bytes. |
+| 2026-11-22 | **Code lives in a new dedicated repo.** | This file moves there. |
 | 2026-11-22 | **App will be fully free. Users are never charged.** | The deployment runs as **non-commercial** (`COMMERCIAL_MODE=false`). TMDB, Google Books, RAWG, Watchmode, MangaDex, MusicBrainz supplementary data and TMDB watch providers can all be enabled. The `commercial_ok` flags stay in config in case this ever changes. |
 
 > ⚠️ **What still counts as commercial:** "users are never charged" isn't quite the same as
